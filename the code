@@ -1,0 +1,14 @@
+name1 = input('what is your name player1:')
+name2 = input('what is your name player2:')
+print(f'{name1} chooses between left and right or say pass to the next row and then {name2}')
+listing  = input(['','',''])
+if listing == 'pass':
+    pass
+if listing == 'left':
+    print(['X','',''])
+    listing22 = input(['X', '', ''])
+    listing33 = input(['Y', '', ''])
+
+listing2 = input(['','',''])
+listing3 = input(['','',''])
+
