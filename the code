@@ -1,14 +1,22 @@
 name1 = input('what is your name player1:')
 name2 = input('what is your name player2:')
-print(f'{name1} chooses between left and right or say pass to the next row and then {name2}')
-listing  = input(['','',''])
-if listing == 'pass':
-    pass
-if listing == 'left':
-    print(['X','',''])
-    listing22 = input(['X', '', ''])
-    listing33 = input(['Y', '', ''])
-
-listing2 = input(['','',''])
-listing3 = input(['','',''])
+print(f'{name1} chooses between 1-9  to the next row or pass and then {name2}')
+listing  =    ([1,2,3])
+listing2 = ([4, 5, 6])
+listing3 = ([7, 8, 9])
+def listingshow():    
+    print(listing);print(listing2);print(listing3)
+input1 = input('type 1-9')
+if input1 == '1':
+    listing[0] = 'X'
+    listingshow()
+if input1 == '2':
+    listing[1] = 'X'
+    listingshow()
+if input1 == '3':
+    listing[2] = 'X'
+    listingshow()
+if input1 == '4':
+    listing[3] = 'X'
+    listingshow()
 
