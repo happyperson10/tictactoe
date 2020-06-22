@@ -13,8 +13,8 @@ def say(a):
     print('don\'t say', a, 'again or it will break')
 while True:
     try:
-        input1 =  input('type 1-9 player1')
-        input2 =  input('type 1-9 player2')
+        input1 =  input('type 1-9 player1 else say finish if the game is complete')
+        input2 =  input('type 1-9 player2 else say finish if the game is complete')
         if input1 == '1':
             listing1[0] = 'X';say(1)
         elif input1 == '2':
@@ -49,6 +49,16 @@ while True:
             listing3[0] = 'O';listingshow();say(7)
         elif input2 == '8':
             listing3[1] = 'O';listingshow();say(8)
+        elif input2 == '9':
+            listing3[2] = 'O';listingshow();say(9)
+        if input1 == 'finish':
+            f'wait for {name2} to the same thing'
+            break
+        if input2 == 'finish':
+            'the game seems finished'
+            break
+    except ValueError:
+        print('error only numbers')
         elif input2 == '9':
             listing3[2] = 'O';listingshow();say(9)
     except ValueError:
