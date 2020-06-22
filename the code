@@ -4,16 +4,17 @@ print(f'{name1} chooses between 1-9  to the next row or pass and then {name2}')
 listing1  =([1, 2, 3])
 listing2 = ([4, 5, 6])
 listing3 = ([7, 8, 9])
-
+def listingshow():
+    """this is for copy paste"""
+    print(listing1)
+    print(listing2)
+    print(listing3)
+def say(a):
+    print('don\'t say', a, 'again or it will break')
 while True:
     try:
-        def listingshow():
-            """this is for copy paste"""
-            print(listing1);print(listing2);print(listing3)
         input1 =  input('type 1-9 player1')
         input2 =  input('type 1-9 player2')
-        def say(a):
-            print('don\'t say',a,'again or it will break')
         if input1 == '1':
             listing1[0] = 'X';say(1)
         if input1 == '2':
@@ -32,7 +33,6 @@ while True:
             listing3[1] = 'X';say(8)
         if input1 == '9':
             listing3[2] = 'X';say(9)
-
         if input2 == '1':
             listing1[0] = 'O';listingshow();say(1)
         if input2 == '2':
