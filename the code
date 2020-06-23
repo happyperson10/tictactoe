@@ -52,14 +52,10 @@ while True:
         elif input2 == '9':
             listing3[2] = 'O';listingshow();say(9)
         if input1 == 'finish':
-            f'wait for {name2} to the same thing'
+            f'wait for {name2} to do same thing'
             break
         if input2 == 'finish':
             'the game seems finished'
             break
-    except ValueError:
-        print('error only numbers')
-        elif input2 == '9':
-            listing3[2] = 'O';listingshow();say(9)
     except ValueError:
         print('error only numbers')
