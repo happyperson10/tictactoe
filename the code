@@ -1,7 +1,7 @@
 name1 = input('what is your name player1:')
 name2 = input('what is your name player2:')
 print(f'{name1} chooses between 1-9  to the next row or pass and then {name2}')
-listing1  =([1, 2, 3])
+listing1 = ([1, 2, 3])
 listing2 = ([4, 5, 6])
 listing3 = ([7, 8, 9])
 def listingshow():
@@ -9,53 +9,46 @@ def listingshow():
     print(listing1)
     print(listing2)
     print(listing3)
-def say(a):
-    print('don\'t say', a, 'again or it will break')
 while True:
     try:
-        input1 =  input('type 1-9 player1 else say finish if the game is complete')
-        input2 =  input('type 1-9 player2 else say finish if the game is complete')
-        if input1 == '1':
-            listing1[0] = 'X';say(1)
-        elif input1 == '2':
-            listing1[1] = 'X';say(2)
-        elif input1 == '3':
-            listing1[2] = 'X';say(3)
-        elif input1 == '4':
-            listing2[0] = 'X';say(4)
-        elif input1 == '5':
-            listing2[1] = 'X';say(5)
-        elif input1 == '6':
-            listing2[2] = 'X';say(6)
-        elif input1 == '7':
-            listing3[0] = 'X';say(7)
-        elif input1 == '8':
-            listing3[1] = 'X';say(8)
-        elif input1 == '9':
-            listing3[2] = 'X';say(9)
-        if input2 == '1':
-            listing1[0] = 'O';listingshow();say(1)
-        elif input2 == '2':
-            listing1[1] = 'O';listingshow();say(2)
-        elif input2 == '3':
-            listing1[2] = 'O';listingshow();say(3)
-        elif input2 == '4':
-            listing2[0] = 'O';listingshow();say(4)
-        elif input2 == '5':
-            listing2[1] = 'O';listingshow();say(5)
-        elif input2 == '6':
-            listing2[2] = 'O';listingshow();say(6)
-        elif input2 == '7':
-            listing3[0] = 'O';listingshow();say(7)
-        elif input2 == '8':
-            listing3[1] = 'O';listingshow();say(8)
-        elif input2 == '9':
-            listing3[2] = 'O';listingshow();say(9)
+        input1 = input('type 1-9 player1 else say finish if the game is complete')
+        input2 = input('type 1-9 player2 else say finish if the game is complete')
+        def inputs(n,b,g,c,m):
+            """if you don't understand here is an example
+               if input1 == '1':
+                   listing1[0] = 'X'"""
+            if n == b:
+                g[c] = m
+        inputs(input1,'1',listing1,0,'X')
+        inputs(input1,'2',listing1,1,'X')
+        inputs(input1,'3',listing1,2,'X')
+        inputs(input1,'4',listing2,0,'X')
+        inputs(input1,'5',listing2,1,'X')
+        inputs(input1,'6',listing2,2,'X')
+        inputs(input1,'7',listing2,0,'X')
+        inputs(input1,'8',listing2,0,'X')
+        inputs(input1,'9',listing2,0,'X')
+        inputs(input2,'1',listing1,0,'O')
+        listingshow()
+        inputs(input2,'2',listing1,1,'O')
+        listingshow()
+        inputs(input2,'3',listing1,2,'O')
+        listingshow()
+        inputs(input2,'4',listing2,0,'O')
+        listingshow()
+        inputs(input2,'5',listing2,1,'O')
+        listingshow()
+        inputs(input2,'6',listing2,2,'O')
+        listingshow()
+        inputs(input2,'7',listing3,0,'O')
+        listingshow()
+        inputs(input2,'8',listing3,1,'O')
+        listingshow()
+        inputs(input2,'9',listing3,2,'O')
+        listingshow()
         if input1 == 'finish':
-            f'wait for {name2} to do same thing'
             break
-        if input2 == 'finish':
-            'the game seems finished'
+        elif input2 == 'finish':
             break
     except ValueError:
         print('error only numbers')
