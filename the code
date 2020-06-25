@@ -9,16 +9,16 @@ def listingshow():
     print(listing1)
     print(listing2)
     print(listing3)
+def inputs(n, b, g, c, m):
+    if n == b:
+        g[c] = m
+    """if you don't understand here is an example
+       if input1 == '1':
+           listing1[0] = 'X'"""
 while True:
     try:
         input1 = input('type 1-9 player1 else say finish if the game is complete')
         input2 = input('type 1-9 player2 else say finish if the game is complete')
-        def inputs(n,b,g,c,m):
-            """if you don't understand here is an example
-               if input1 == '1':
-                   listing1[0] = 'X'"""
-            if n == b:
-                g[c] = m
         inputs(input1,'1',listing1,0,'X')
         inputs(input1,'2',listing1,1,'X')
         inputs(input1,'3',listing1,2,'X')
